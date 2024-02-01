@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--Project Properties-->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <!--Package Properties-->
+  <PropertyGroup>
+    <Title>LibDevris.MethodSinter</Title>
+    <Version>0.9.0-debug-02</Version>
+    <Authors>CDnX</Authors>
+    <Company>Devris Studio</Company>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/ruby3141/LibDevris.MethodSinter</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>Define multiple times, Call at once.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Devris.LibDevris.MethodSinter.Generator\Devris.LibDevris.MethodSinter.Generator.csproj" PrivateAssets="all"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="tools\*.ps1" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="" />
+    <TfmSpecificPackageFile Include="$(OutputPath)\Devris.LibDevris.MethodSinter.Generator.dll" PackagePath="analyzers/dotnet/cs" />
+  </ItemGroup>
+
+</Project>
