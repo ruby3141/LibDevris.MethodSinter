@@ -10,7 +10,7 @@
   <!--Package Properties-->
   <PropertyGroup>
     <Title>LibDevris.MethodSinter</Title>
-    <Version>0.9.0-debug-02</Version>
+    <Version>0.9.0</Version>
     <Authors>CDnX</Authors>
     <Company>Devris Studio</Company>
     <PackageIcon>icon.png</PackageIcon>
