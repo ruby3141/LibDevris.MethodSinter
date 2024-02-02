@@ -16,15 +16,23 @@
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/ruby3141/LibDevris.MethodSinter</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
     <Description>Define multiple times, Call at once.</Description>
+    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <Copyright>Copyright (c) CDnX 2024-</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Devris.LibDevris.MethodSinter.Generator\Devris.LibDevris.MethodSinter.Generator.csproj" PrivateAssets="all"/>
+    <ProjectReference Include="..\Devris.LibDevris.MethodSinter.Generator\Devris.LibDevris.MethodSinter.Generator.csproj" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
