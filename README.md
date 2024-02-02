@@ -1,4 +1,6 @@
-# LibDevris.MethodSinter
+ LibDevris.MethodSinter <br>
+[![NuGet Version](https://img.shields.io/nuget/v/Devris.LibDevris.MethodSinter)](https://www.nuget.org/packages/Devris.LibDevris.MethodSinter)
+====
 
 Define multiple times, Call at once.
 
