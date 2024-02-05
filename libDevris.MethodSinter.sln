@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devris.LibDevris.MethodSinter", "Devris.LibDevris.MethodSinter\Devris.LibDevris.MethodSinter.csproj", "{F54E78E2-85EC-4C07-92E4-74C8B049DB07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devris.LibDevris.MethodSinter.Generator", "Devris.LibDevris.MethodSinter.Generator\Devris.LibDevris.MethodSinter.Generator.csproj", "{A89C7033-7A66-4024-98FA-DF291F47EE46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devris.LibDevris.MethodSinter.Generator", "Devris.LibDevris.MethodSinter.Generator\Devris.LibDevris.MethodSinter.Generator.csproj", "{A89C7033-7A66-4024-98FA-DF291F47EE46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devris.LibDevris.MethodSinter.Tests", "Devris.LibDevris.MethodSinter.Tests\Devris.LibDevris.MethodSinter.Tests.csproj", "{42570971-A6A5-4456-A5B5-6E1B8B08182B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A89C7033-7A66-4024-98FA-DF291F47EE46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A89C7033-7A66-4024-98FA-DF291F47EE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A89C7033-7A66-4024-98FA-DF291F47EE46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42570971-A6A5-4456-A5B5-6E1B8B08182B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42570971-A6A5-4456-A5B5-6E1B8B08182B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42570971-A6A5-4456-A5B5-6E1B8B08182B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42570971-A6A5-4456-A5B5-6E1B8B08182B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
