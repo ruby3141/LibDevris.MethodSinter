@@ -33,7 +33,6 @@ namespace Devris.LibDevris.MethodSinter.Generator
                             Parameters = ((MethodDeclarationSyntax)gac.TargetNode).ParameterList.Parameters
                                 .Select(p => new SinteredMethodData.MethodData.ParameterData
                                 {
-                                    Attributes = p.AttributeLists.ToString(),
                                     Modifier = p.Modifiers.ToString(),
                                     Type = p.Type.ToString(),
                                     ParameterName = p.Identifier.Text
@@ -114,8 +113,6 @@ namespace {source.Ancestor.NamespaceName}
                 public IEnumerable<ParameterData> Parameters { get; set; }
                 public struct ParameterData
                 {
-                    public string Attributes { get; set; }
-
                     public string Modifier { get; set; }
 
                     public string Type { get; set; }
@@ -124,7 +121,10 @@ namespace {source.Ancestor.NamespaceName}
 
                     public override string ToString()
                     {
-                        return string.Join(" ", new[] { Attributes, Modifier, Type, ParameterName }.Where(s => string.IsNullOrWhiteSpace(s) == false));
+                        if (string.IsNullOrWhiteSpace(Modifier))
+                            return $"{Type} {ParameterName}";
+
+                        return $"{Modifier} {Type} {ParameterName}";
                     }
                 }
             }
