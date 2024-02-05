@@ -83,7 +83,7 @@ namespace {source.Ancestor.NamespaceName}
     {{
         {source.Method.Modifiers} void {source.Method.MethodName}({string.Join(", ", source.Method.Parameters)})
         {{
-            {string.Join("\r\n            ", source.FragmentNames.Select(f => $"{f}({string.Join(",", inputParameters)});"))}
+            {string.Join("\r\n            ", source.FragmentNames.Select(f => $"{f}({string.Join(", ", inputParameters)});"))}
         }}
     }}
 }}
