@@ -4,7 +4,6 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>9.0</LangVersion>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <!--Package Properties-->
@@ -28,14 +27,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="icon.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Update="README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+    <None Update="icon.png" Pack="true" PackagePath="\" />
+    <None Update="README.md" Pack="true" PackagePath="\" />
     <None Update="tools\*.ps1" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="" />
     <TfmSpecificPackageFile Include="$(OutputPath)\Devris.LibDevris.MethodSinter.Generator.dll" PackagePath="analyzers/dotnet/cs" />
   </ItemGroup>
