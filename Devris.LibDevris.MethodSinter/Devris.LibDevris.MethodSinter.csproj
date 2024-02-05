@@ -18,7 +18,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
     <Description>Define multiple times, Call at once.</Description>
-    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <PackageReleaseNotes>Check https://github.com/ruby3141/LibDevris.MethodSinter/releases for changes.</PackageReleaseNotes>
     <Copyright>Copyright (c) CDnX 2024-</Copyright>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
