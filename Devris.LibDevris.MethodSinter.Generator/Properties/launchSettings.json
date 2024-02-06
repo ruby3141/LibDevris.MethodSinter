@@ -1,0 +1,8 @@
+{
+    "profiles": {
+        "Devris.LibDevris.MethodSinter.Generator": {
+            "commandName": "DebugRoslynComponent",
+            "targetProject": "..\\Devris.LibDevris.MethodSinter.Tests\\Devris.LibDevris.MethodSinter.Tests.csproj"
+        }
+    }
+}
