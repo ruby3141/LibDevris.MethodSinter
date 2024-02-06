@@ -23,7 +23,7 @@ namespace Devris.LibDevris.MethodSinter.Generator
                             Usings = ((MethodDeclarationSyntax)gac.TargetNode).FirstAncestorOrSelf<CompilationUnitSyntax>().Usings
                                 .Select(u => u.ToString()).Where(s => string.IsNullOrWhiteSpace(s) == false)
                                 .ToImmutableArray(),
-                            NamespaceName = ((MethodDeclarationSyntax)gac.TargetNode).FirstAncestorOrSelf<NamespaceDeclarationSyntax>().Name.ToString(),
+                            NamespaceName = ((MethodDeclarationSyntax)gac.TargetNode).FirstAncestorOrSelf<BaseNamespaceDeclarationSyntax>().Name.ToString(),
                             ClassName = ((MethodDeclarationSyntax)gac.TargetNode).FirstAncestorOrSelf<ClassDeclarationSyntax>().Identifier.Text,
                         },
                         Method = new SinteredMethodData.MethodData
