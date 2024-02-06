@@ -11,7 +11,9 @@ jobs:
       packages: write
       contents: read
     steps:
-      - run: git config --global core.eol crlf
+      - run: |
+          git config --global core.autocrlf false
+          git config --global core.eol crlf
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v3
         with:
