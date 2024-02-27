@@ -72,7 +72,8 @@ namespace Devris.LibDevris.MethodSinter.Generator
                 .Select(p => p.Modifier switch
                     {
                         "params" or "" => p.ParameterName,
-                        "ref readonly" => $"in {p.ParameterName}",
+                        "scoped ref" => $"ref {p.ParameterName}",
+                        "scoped ref readonly" or "scoped in" or "ref readonly" => $"in {p.ParameterName}",
                         var mod => $"{mod} {p.ParameterName}"
                     });
 

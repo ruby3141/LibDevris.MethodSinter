@@ -67,7 +67,7 @@ public partial class FileScopedNamespaceTests
     }
 
     [SinteredMethod(nameof(ComplexArgumentTest))]
-    private partial void Test2_SinteredMethod(ref readonly TestStruct testStruct, [DisallowNull] StringBuilder? stringBuilder, params string[] strings);
+    private partial void Test2_SinteredMethod(scoped ref readonly TestStruct testStruct, [DisallowNull] StringBuilder? stringBuilder, params string[] strings);
 
     [MethodFragment(nameof(ComplexArgumentTest))]
     private void Test2_SetTestStruct(ref readonly TestStruct testStruct, StringBuilder? stringBuilder, IEnumerable<string> strings)
@@ -77,7 +77,7 @@ public partial class FileScopedNamespaceTests
     }
 
     [MethodFragment(nameof(ComplexArgumentTest))]
-    private void Test2_SetStringBuilderValue(ref readonly TestStruct testStruct, [DisallowNull] StringBuilder? stringBuilder, params string[] strings)
+    private void Test2_SetStringBuilderValue(scoped in TestStruct testStruct, [DisallowNull] StringBuilder? stringBuilder, params string[] strings)
     {
         stringBuilderValue = stringBuilder.ToString();
     }
