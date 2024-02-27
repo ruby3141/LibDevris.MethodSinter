@@ -33,7 +33,7 @@ namespace Devris.LibDevris.MethodSinter.Generator
                             Parameters = ((MethodDeclarationSyntax)gac.TargetNode).ParameterList.Parameters
                                 .Select(p => new SinteredMethodData.MethodData.ParameterData
                                 {
-                                    Modifier = p.Modifiers.ToString(),
+                                    Modifier = string.Join(" ", p.Modifiers),
                                     Type = p.Type.ToString(),
                                     ParameterName = p.Identifier.Text
                                 }).ToImmutableArray(),
