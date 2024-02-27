@@ -33,7 +33,7 @@ namespace Devris.LibDevris.MethodSinter.Generator
                             Parameters = ((MethodDeclarationSyntax)gac.TargetNode).ParameterList.Parameters
                                 .Select(p => new SinteredMethodData.MethodData.ParameterData
                                 {
-                                    Modifier = p.Modifiers.ToString(),
+                                    Modifier = string.Join(" ", p.Modifiers),
                                     Type = p.Type.ToString(),
                                     ParameterName = p.Identifier.Text
                                 }).ToImmutableArray(),
@@ -72,7 +72,8 @@ namespace Devris.LibDevris.MethodSinter.Generator
                 .Select(p => p.Modifier switch
                     {
                         "params" or "" => p.ParameterName,
-                        "ref readonly" => $"in {p.ParameterName}",
+                        "scoped ref" => $"ref {p.ParameterName}",
+                        "scoped ref readonly" or "scoped in" or "ref readonly" => $"in {p.ParameterName}",
                         var mod => $"{mod} {p.ParameterName}"
                     });
 
